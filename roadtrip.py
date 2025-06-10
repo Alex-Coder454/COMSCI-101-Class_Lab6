@@ -18,19 +18,22 @@
 print("This program will answer for you some relevant questions for any road trip that you choose to go on.")
 print("First, I would like to ask you some questions concerning certain factors to help me calculate your answers.")
 
-initial_money = float(input("How much money do you have when you start out?:" )) # in dollars or cents
-tank_size = int(input("How many gallons of fuel can your vehicle hold in its tank?:" )) # in gallons
-mpg = int(input("How fuel efficient is your car in miles per gallon?:" )) # for fuel efficiency
-ppg = float(input("What is the current price per galloon for the fuel you use in the are you are travelling in?:" )) # price for cost
-distance = int(input("How far is your destination from where you are starting out from in miles?:" )) # in miles
-avg_speed = int(input("How fast on average will you be traveeling at while on this roadtrip?:" )) # in miles per hour
+initial_money = float(input("How much money do you have when you start out?: " )) # in dollars or cents
+tank_size = float(input("How many gallons of fuel can your vehicle hold in its tank?: " )) # in gallons
+mpg = int(input("How fuel efficient is your car in miles per gallon?: " )) # for fuel efficiency
+ppg = float(input("What is the current price per galloon for the fuel you use in the are you are travelling in?: " )) # price for cost
+distance = float(input("How far is your destination from where you are starting out from in miles?: " )) # in miles
+avg_speed = float(input("How fast on average will you be traveeling at while on this roadtrip?: " )) # in miles per hour
+
+print() # two print statements to space out two lines between questions and answers
+print()
 
 # To answer Question #1, we need to figure out the total amount of gallons required for the trip from the total distance and the fuel efficiency of the vehicle.
 def calc_full_trip_gall(size, num):
     return size / num
 
 full_trip_gall = calc_full_trip_gall(distance, mpg)
-print(f"To reach your destination, your vehicle will need to consume {full_trip_gall} gallons.")
+print(f"\nTo reach your destination, your vehicle will need to consume {full_trip_gall} gallons.")
 
 # To answer Question #2, we need to figure out the total amount of times that one needs to stop for gas on the trip from the distance per tank and the total distance.
 
